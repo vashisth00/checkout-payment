@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Step1 from './steps/step1'
+
+import Step2 from './steps/step2'
+
+import Step3 from './steps/step3'
 
 
 function _defineProperty(obj, key, value) { if (key in obj) 
     { 
         Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); 
-} else { obj[key] = value; } return obj; } class MasterForm extends React.Component {
+} else { obj[key] = value; } return obj; } 
+
+
+class MasterForm extends React.Component {
     constructor(props) {
         super(props); _defineProperty(this, "handleChange",
 
@@ -118,71 +126,5 @@ function _defineProperty(obj, key, value) { if (key in obj)
     }
 }
 
-
-function Step1(props) {
-    if (props.currentStep !== 1) {
-        return null;
-    }
-    return /*#__PURE__*/(
-        React.createElement("div", { className: "form-group" }, /*#__PURE__*/
-            React.createElement("label", { htmlFor: "email" }, "Email address"), /*#__PURE__*/
-            React.createElement("input", {
-                className: "form-control",
-                id: "email",
-                name: "email",
-                type: "text",
-                placeholder: "Enter email",
-                value: props.email,
-                onChange: props.handleChange
-            })));
-
-
-
-}
-
-function Step2(props) {
-    if (props.currentStep !== 2) {
-        return null;
-    }
-    return /*#__PURE__*/(
-        React.createElement("div", { className: "form-group" }, /*#__PURE__*/
-            React.createElement("label", { htmlFor: "username" }, "Username"), /*#__PURE__*/
-            React.createElement("input", {
-                className: "form-control",
-                id: "username",
-                name: "username",
-                type: "text",
-                placeholder: "Enter username",
-                value: props.username,
-                onChange: props.handleChange
-            })));
-
-
-
-}
-
-function Step3(props) {
-    if (props.currentStep !== 3) {
-        return null;
-    }
-    return /*#__PURE__*/(
-        React.createElement(React.Fragment, null, /*#__PURE__*/
-            React.createElement("div", { className: "form-group" }, /*#__PURE__*/
-                React.createElement("label", { htmlFor: "password" }, "Password"), /*#__PURE__*/
-                React.createElement("input", {
-                    className: "form-control",
-                    id: "password",
-                    name: "password",
-                    type: "password",
-                    placeholder: "Enter password",
-                    value: props.password,
-                    onChange: props.handleChange
-                })), /*#__PURE__*/
-
-
-            React.createElement("button", { className: "btn btn-success btn-block" }, "Sign up")));
-
-
-}
 
 export default MasterForm;
