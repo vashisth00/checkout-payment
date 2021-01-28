@@ -4,10 +4,12 @@ import './index.css';
 import MasterForm from './Pay';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Example from './components/modal';
 
 ReactDOM.render(
   <React.StrictMode>
-   <MasterForm></MasterForm>
+    <Example></Example>
+   {/* <MasterForm></MasterForm> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
