@@ -9,7 +9,7 @@ import Example from './components/modal';
 ReactDOM.render(
   <React.StrictMode>
     <Example></Example>
-   {/* <MasterForm></MasterForm> */}
+   
   </React.StrictMode>,
   document.getElementById('root')
 );

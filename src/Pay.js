@@ -4,9 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Step1 from './steps/step1'
-
 import Step2 from './steps/step2'
-
 import Step3 from './steps/step3'
 
 
@@ -92,8 +90,8 @@ class MasterForm extends React.Component {
     render() {
         return /*#__PURE__*/(
             React.createElement(React.Fragment, null, /*#__PURE__*/
-                React.createElement("h1", null, "React Wizard Form \uD83E\uDDD9\u200D\u2642\uFE0F"), /*#__PURE__*/
-                React.createElement("p", null, "Step ", this.state.currentStep, " "), /*#__PURE__*/
+                // React.createElement("h1", null, "React Wizard Form \uD83E\uDDD9\u200D\u2642\uFE0F"), /*#__PURE__*/
+                // React.createElement("p", null, "Step ", this.state.currentStep, " "), /*#__PURE__*/
 
                 React.createElement("form", { onSubmit: this.handleSubmit }, /*#__PURE__*/
 

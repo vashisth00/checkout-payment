@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.brown{
+  height: 45px;
+}
+
+.blue-text{
+  color: #4e89cb;
+}
+
+.pricing{
+      margin-right: 0px !important;
+     margin-left: 0px !important;
+}

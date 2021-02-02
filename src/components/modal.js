@@ -1,6 +1,7 @@
 
 import React,{useState} from 'react';
 import { Button, Modal} from 'react-bootstrap';
+import MasterForm from '../Pay';
 
 
 function Example() {
@@ -12,7 +13,7 @@ function Example() {
     return (
       <>
         <Button variant="primary" onClick={handleShow}>
-          Launch static backdrop modal
+          Get Credit Insurance
         </Button>
   
         <Modal
@@ -22,11 +23,9 @@ function Example() {
           keyboard={false}
         >
           <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            I will not close if you click outside me. Don't even try to press
-            escape key.
+          <MasterForm></MasterForm> 
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleClose}>
