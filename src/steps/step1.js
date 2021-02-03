@@ -31,7 +31,7 @@ export default function Step1(props) {
               React.createElement(
                 "div", { className: "row pricing" }, 
               React.createElement(
-                "div", { className: "col-6 px-2" }, 
+                "div", { className: "col-6 px-price" }, 
             React.createElement("label", { htmlFor: "email" }, "Invoice Value"), 
             React.createElement("input", {
                 className: "form-control",
@@ -45,13 +45,26 @@ export default function Step1(props) {
               ),
               React.createElement(
                 "div", { className: "col-6" }, 
-            React.createElement("label", { htmlFor: "email" }, "Invoice Value"), 
+            React.createElement("label", { htmlFor: "number" }, "Invoice Number"), 
             React.createElement("input", {
                 className: "form-control",
                 id: "email",
                 name: "email",
                 type: "text",
-                placeholder: "€",
+                placeholder: "Invoice Number",
+                value: props.email,
+                onChange: props.handleChange
+            })
+              ),
+              React.createElement(
+                "div", { className: "col-12" }, 
+            React.createElement("label", { htmlFor: "number" }, "Your Debtor"), 
+            React.createElement("input", {
+                className: "form-control",
+                id: "email",
+                name: "email",
+                type: "text",
+                placeholder: "Invoice Number",
                 value: props.email,
                 onChange: props.handleChange
             })
