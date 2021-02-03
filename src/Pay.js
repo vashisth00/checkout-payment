@@ -74,15 +74,32 @@ class MasterForm extends React.Component {
 
     nextButton() {
         let currentStep = this.state.currentStep;
-        if (currentStep < 3) {
+        if (currentStep === 1) {
             return /*#__PURE__*/(
+                React.createElement("div",
+                {
+                    className: "text-center"
+                },
                 React.createElement("button", {
-                    className: "btn btn-primary float-right",
+                    className: "btn btn-primary text-center",
                     type: "button", onClick: this._next
-                }, "Next"));
+                }, "Calculate Quote")
+            ));
 
 
 
+        } else if(currentStep === 2){
+                return /*#__PURE__*/(
+                    React.createElement("div",
+                    {
+                        className: "text-center"
+                    },
+                    React.createElement("button", {
+                        className: "btn btn-primary text-center",
+                        type: "button", onClick: this._next
+                    }, "Calculate Quote")
+                ));
+            
         }
         return null;
     }
