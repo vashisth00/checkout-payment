@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import Step1 from './steps/step1'
 import Step2 from './steps/step2'
 import Step3 from './steps/step3'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLock } from '@fortawesome/free-solid-svg-icons'
 
 
 function _defineProperty(obj, key, value) { if (key in obj) 
@@ -61,10 +60,12 @@ class MasterForm extends React.Component {
         let currentStep = this.state.currentStep;
         if (currentStep !== 1) {
             return /*#__PURE__*/(
+                React.createElement("div", {className:"pb-5"},
                 React.createElement("button", {
                     className: "btn btn-secondary",
                     type: "button", onClick: this._prev
-                }, "Previous"));
+                }, "Previous"))
+                );
 
 
 
@@ -74,16 +75,30 @@ class MasterForm extends React.Component {
 
     nextButton() {
         let currentStep = this.state.currentStep;
+        const element = <FontAwesomeIcon className="float-left pt-1" icon={faLock} />
         if (currentStep === 1) {
+            
             return /*#__PURE__*/(
                 React.createElement("div",
                 {
                     className: "text-center"
                 },
-                React.createElement("button", {
-                    className: "btn btn-primary text-center",
+               
+                React.createElement("button", 
+            
+                {
+                    className: "btn btn-primary text-center blue-theme",
+                    style: {width: "100%"},
                     type: "button", onClick: this._next
-                }, "Calculate Quote")
+                },
+                element,
+                "Calculate Quote",
+               
+               
+                ),
+                
+                
+                
             ));
 
 
@@ -95,9 +110,12 @@ class MasterForm extends React.Component {
                         className: "text-center"
                     },
                     React.createElement("button", {
-                        className: "btn btn-primary text-center",
-                        type: "button", onClick: this._next
-                    }, "Calculate Quote")
+                        className: "btn btn-primary text-center blue-theme",
+                    style: {width: "100%"},
+                    },
+                    element,
+                     "Calculate Quote")
+
                 ));
             
         }

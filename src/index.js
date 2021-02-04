@@ -4,12 +4,13 @@ import './index.css';
 import MasterForm from './Pay';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Example from './components/modal';
+import InsuranceBtn from './components/modal';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Example></Example>
-   
+    <div className="px-5 py-5">
+    <InsuranceBtn></InsuranceBtn>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );

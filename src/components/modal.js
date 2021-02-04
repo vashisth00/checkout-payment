@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/alt-text */
 
 import React,{useState} from 'react';
 import { Button, Modal} from 'react-bootstrap';
 import MasterForm from '../Pay';
 
 
-function Example() {
+function InsuranceBtn() {
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
@@ -12,7 +13,8 @@ function Example() {
   
     return (
       <>
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="primary" className="blue-color" onClick={handleShow}>
+          <img src="https://i.ibb.co/pz67kPY/logo-sprinque.png" height="50px"></img>
           Get Credit Insurance
         </Button>
   
@@ -28,14 +30,14 @@ function Example() {
           <MasterForm></MasterForm> 
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
+            {/* <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>
-            <Button variant="primary">Understood</Button>
+            <Button variant="primary">Understood</Button> */}
           </Modal.Footer>
         </Modal>
       </>
     );
   }
   
- export default Example;
+ export default InsuranceBtn;
